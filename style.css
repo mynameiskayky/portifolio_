@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+@font-face {
+    font-family: 'Bookman Old Style';
+    src: url('fonts/bookman-old-style.ttf');
+}
+
+:root {
+    --font-principal: 'Bookman Old Style' sans-serif;
+    --font-secundaria: 'Open Sans', sans-serif;
+
+    --cor-branco: #FEFBFB;
+    --cor-bg-branco: #EFEFEF;
+    --cor-cinza: #707070;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: var(--cor-branco);
+    transition: 0.4s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+img {
+    width: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Menu */
+
+header {
+    background-image: linear-gradient(to bottom, #313131ee, #313131ea); 
+}
+
+.menu {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-family: var(--font-principal);
+    padding: 0 30px;
+}
+
+.logo {
+    font-family: var(--font-principal);
+    font-style: italic;
+    font-size: 1.5em;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+}
+
+.menu-items {
+    display: flex;
+    list-style: none;
+}
+
+.menu-items li a {
+    margin-left: 25px;
+    font-size: 1.25em;
+}
+
+/* Início */
+
+.inicio {
+    position: relative;
+    height: 720px;
+    background: rgba(31, 31, 31, 50%) url('images/bg.jpg') 25% 25%;
+    background-blend-mode: hue;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.inicio-items {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--cor-branco);
+    font-family: var(--font-principal);
+    width: 700px;
+}
+
+.inicio-items h3 {
+    font-size: 1.5em;
+    text-align: center;
+    font-style: italic;
+}
+
+.inicio-items h1 {
+    font-size: 3em;  
+    font-weight: bold;
+    text-align: center;
+    font-style: italic;
+    margin: 20px 0 20px
+}
+
+.inicio-items p {
+    text-align: center;
+    font-size: 1.5em;
+    font-style: italic;
+    color: #BABABA;
+    margin-bottom: 60px;
+}
+
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    border: 1px solid var(--cor-branco);
+    padding: 10px 30px;
+    border-radius: 10px;
+}
+
+.sobre-mim {
+    background-color: var(--cor-bg-branco);
+    height: 700px;
+}
+
+.sobre-flex {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    margin: 0 auto;
+    height: 700px;
+}
+
+.img-eu {
+    width: 380px;
+    height: 380px;
+    object-fit: cover;
+    box-shadow: 20px 20px 100px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.sobre-info {
+    flex: 2 1 420px;
+    max-width: 520px;
+    color: #585858;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-left: 60px;
+}
+
+.sobre-info h1 {
+    font-family: var(--font-principal);
+    margin-bottom: 20px;
+    font-size: 1.75em;
+}
+
+.sobre-info p {
+    margin-bottom: 40px;
+    font-family: var(--font-secundaria);
+    margin-bottom: 50px;
+}
+
+.black {
+    color: var(--cor-cinza);
+    border-color: #000;
+}
+
+.sobre-bg {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.mobile-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.line {
+    display: none;
+    width: 30px;
+    height: 2px;
+    background-color: #FEFBFB;
+    margin: 3px;
+}
+
+@media(max-width: 800px) {
+    body {
+        font-size: 90%;
+    }
+
+    .inicio-items {
+        width: 700px;
+    }
+}
+
+@media(max-width: 375px) {
+    body {
+        font-size: 90%;
+    }
+
+    .inicio {
+        height: 500px;
+    }
+
+    .inicio-items {
+        width: 320px;
+        font-size: 80%;
+    }
+
+    .inicio-items h1 {
+        font-size: 30px;
+    }
+
+    .sobre-flex {
+        height: 600px;
+    }
+
+    .line {
+        display: block;
+
+    }
+
+    .menu-items {
+        display: none;
+    }
+
+    .img-eu {
+        width: 200px;
+        height: 200px;
+    }
+
+    .sobre-info {
+        margin: 0;
+        padding: 0;
+    }
+}
